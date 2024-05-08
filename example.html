@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Movie Selector</title>
+    <!-- <link href="style.css" rel="stylesheet" type="text/css" /> -->
+    <style>
+        *{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+body{ font-family: "Open Sans";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  min-height: 100vh;
+  background-image: url(images/layers.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: cursive;
+}
+.mainbox{
+  position: relative;
+  width: 500px;
+  height: 500px;
+}
+.mainbox:after{
+  position: absolute;
+  content: '';
+  width: 32px;
+  height: 32px;
+  background: url('arrow-left.png') no-repeat;
+  background-size: 32px;
+  right: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.box{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  font-weight: bold;
+  border-radius: 50%;
+  border: 10px solid #fff;
+  overflow: hidden;
+  transition: all ease 5s;
+}
+span{
+  width: 50%;
+  height: 50%;
+  display: inline-block;
+  position: absolute;
+}
+.span1{
+  clip-path: polygon(0 92%, 100% 50%, 0 8%);
+  background-color: white;
+  top: 120px;
+  left: 0;
+}
+.span2{
+  clip-path: polygon(100% 92%, 0 50%, 100% 8%);
+  background-color: rgb(135, 135, 192);
+  top: 120px;
+  right: 0;
+}
+.span3{
+  clip-path: polygon(50% 0%, 8% 100%, 92% 100%);
+  background-color: rgb(156, 156, 201);
+  bottom: 0;
+  left: 120px;
+}
+.span4{
+  clip-path: polygon(50% 100%, 92% 0, 8% 0);
+  background-color: rgb(135, 135, 192);
+  top: 0;
+  left: 120px;
+}
+.box1 .span3 b{
+   transform: translate(-50%, -50%) rotate(-270deg);
+}
+.box1 .span1 b,
+.box2 .span1 b{
+  transform: translate(-50%, -50%) rotate(185deg);
+}
+.box2 .span3 b{
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+.box1 .span4 b,
+.box2 .span4 b{
+  transform: translate(-50%, -50%) rotate(-85deg);
+}
+
+span b{
+  font-size: 24px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.box2{
+  width: 100%;
+  height: 100%;
+  transform: rotate(-135deg);
+}
+.spin{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  background-color: #001aff;
+  color: #fff;
+  box-shadow: 0 5px 20px #000;
+  font-weight: bold;
+  font-size: 22px;
+  cursor: pointer;
+}
+.spin:active{
+  width: 70px;
+  height: 70px;
+  font-size: 20px;
+}
+.button{
+    top: 40vh;
+    left:35vw;
+}
+.mainbox.animate:after{
+  animation: animateArrow 0.7s ease infinite;
+}
+@keyframes animateArrow{
+  50%{
+    right: -40px;
+  }
+}
+    </style>
+  </head>
+  <body> 
+  <div id="mainbox" class="mainbox">
+    <div id="box" class="box">
+      <div class="box1">
+        <span class="span1"><b>10 coins</b></span>
+        <span class="span2"><b>3 hints</b></span>
+        <span class="span3"><b>500 coins</b></span>
+        <span class="span4"><b>350 coins</b></span>
+      </div>
+      <div class="box2">
+        <span class="span1"><b>100 coins</b></span>
+        <span class="span2"><b>50 coins </b></span>
+        <span class="span3"><b>0ops!</b></span>
+        <span class="span4"><b>200 coins</b></span>
+      </div>
+    </div> 
+    <button class="spin" onclick="rotateFunction()">SPIN</button>
+  </div>
+  <script>
+    function rotateFunction(){
+  var min = 1024;
+  var max = 9999;
+  var deg = Math.floor(Math.random() * (max - min)) + min;
+  document.getElementById('box').style.transform = "rotate("+deg+"deg)";
+}
+var element = document.getElementById('mainbox');
+  element.classList.remove('animate');
+  setTimeout(function(){
+    element.classList.add('animate');
+  }, 5000);
+  </script>
+  </body>
+</html>

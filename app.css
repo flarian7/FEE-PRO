@@ -1,0 +1,144 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    /* font-family: 'Poppins',sans-serif; */
+    text-decoration:none;
+    list-style:none;
+}
+body{
+    min-height: 100vh;
+    background-image: url(images/bg1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+header{
+    /* position:fixed; */
+    width:100%;
+    top:0;
+    right:0;
+    z-index:1000;
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+    background: transparent;
+    padding: 20px 12%;
+    transition: all .50s ease;
+}
+.title{
+    font-weight: 40px;
+    font-size: 50px;
+    color: white;
+
+}
+h1{
+    font-size: 50px;
+    float:left;
+    color:white;
+}
+.navbar{
+    display:flex;
+}
+.navbar a{
+    color:white;
+    font-size:25px;
+    font-weight:500;
+    padding: 5px 0;
+    margin:0px 15px;
+    transition: all .50s ease;
+}
+.navbar a:hover{
+    color:rgb(87, 175, 247)
+}
+.navbar a.active{
+    color:rgb(87, 175, 247)
+}
+.main{
+    display:flex;
+    align-items:center;
+}
+.search input[type=text]{
+    border:2px solid black;
+    border-radius:14px;
+    padding:7px 9px;
+    width:500px;
+}  
+.search{
+    float:left;
+    padding:12px 12px;
+}     
+.search button{
+    color: #f2f2f2;
+    float: left;
+    padding: 5px 10px;
+    margin-right: 70px;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+} 
+button{
+  cursor: pointer;
+  border: 0;
+  width:5px;
+  border-radius: 6px;
+  font-weight: 600;
+  margin: 0 5px;
+  width: 200px;
+  padding: 5px 0;
+  box-shadow: 0 0 20px rgba(87, 175, 247, 0.5);
+  transition: 0.4s;
+}
+.reg {
+    color: white; 
+ }
+  
+.log {
+    color:rgb(87, 175, 247);
+  }
+  
+button:hover {
+    color: white;
+    box-shadow: 0 0 20px rgba(87, 175, 247, 0.6);
+    background-color: rgb(87, 175, 247);
+  }
+  
+  
+@media(max-width:1280px){
+    header{
+        padding:14px 2%;
+        transition:.2s;
+    }
+    .navbar a{
+        padding: 5px 0;
+        margin: 0px 20px;
+    }
+}
+@media(max-width:1090px){
+    .navbar{
+        display: none!important;
+        transition: all .50s ease;
+    }
+}
+#box{
+    width: 200px;
+    height: 250px;
+    padding: 10px;
+    margin: 10px;
+    background-color:white;
+    border-radius: 5%;
+    float:left;
+    text-align:center; 
+    margin-left:200px;
+    margin-top:20px;
+    margin-bottom:100px;
+    text-decoration:none;
+    font-size:30px;
+    color:black;
+    transition: transform .2s; /* Animation */
+  }
+#box:hover{
+    transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}  
+.image{
+    text-align: center; 
+} 

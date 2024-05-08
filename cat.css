@@ -1,0 +1,52 @@
+body{
+    min-height: 100vh;
+    background-image: url(images/scie.avif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: cursive;
+}
+p{
+    color:rgb(174, 39, 174);
+    font-weight: bold;
+}
+span{
+    font-size: 50px;
+    font-weight: bolder;
+    color: white;
+    margin:10px 10px 10px 50px;
+}
+#searchbar input[type=text]{
+    border:2px solid black;
+    border-radius:14px;
+    padding:7px 9px;
+    width:250px;
+}  
+#searchbar{
+    float:right;
+    padding:12px 12px;
+    margin-top:-40px;
+    margin-right:60px;
+}     
+#searchbar button{
+    color: #f2f2f2;
+    float: left;
+    padding: 5px 10px;
+    margin-right: 70px;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+} 
+.box_cat{
+    background-color: white;
+    height:210px;
+    width:200px;
+    padding:10px 10x 10px 10px;
+    padding-left:70px;
+    padding-top:30px;
+    margin:20px 130px 100px 50px;
+    border-radius: 20px;
+    float:left;
+}
+.box_cat p{
+    margin-left:35px;
+}

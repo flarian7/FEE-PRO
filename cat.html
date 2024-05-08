@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories</title>
+    <link rel="stylesheet" href="cat.css">
+    <style>
+        body{
+    min-height: 100vh;
+    background-image: url(images/scie.avif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: cursive;
+}
+#searchbar{ 
+	margin-left: 15%; 
+	padding:15px; 
+	border-radius: 10px; 
+} 
+
+input[type=text] { 
+	width: 30%; 
+	-webkit-transition: width 0.15s ease-in-out; 
+	transition: width 0.15s ease-in-out; 
+} 
+
+/* When the input field gets focus, 
+		change its width to 100% */
+input[type=text]:focus { 
+	width: 70%; 
+} 
+
+#list{ 
+	font-size: 1.5em; 
+	margin-left: 90px;
+    list-style-type: none; 
+} 
+
+.animals{ 
+display: list-item;	 
+} 
+.box_cat{
+    background-color: white;
+    height:210px;
+    width:230px;
+    padding:10px 10x 10px 10px;
+    padding-left:70px;
+    padding-top:30px;
+    margin:20px 50px 20px 50px;
+    border-radius: 20px;
+    float:left;
+}
+.box_cat:hover{
+    transform: scale(1.05);
+    transition-duration: 0.2s;
+}
+.box_cat p{
+    margin-left:35px;
+}
+    </style>
+</head>
+<body>
+    <span>Categories</span>
+    <br>
+    <div class="search">
+        <input id="searchbar" onkeyup="search_animal()" type="text"
+		name="search" placeholder="Search here">
+    </div>
+	<ol id='list'> 
+        <li class="animals"> <a href="music.html"><div class="box_cat">
+             <img src="images/headphones.png"width="120px" height="120px">
+             <p>Music</p>
+         </div></a> </li>
+ 
+         <li class="animals"> <a href="sports.html"><div class="box_cat">
+             <img src="images/sports.png" width="120px" height="120px">
+             <p>Sports</p>
+         </div></a> </li>
+ 
+         <li class="animals"> <a href="animals.html"><div class="box_cat">
+             <img src="images/unicorn.png" width="120px" height="120px">
+             <p>Animals</p>
+         </div></a> </li>
+ 
+         <li class="animals"> <a href="design.html"><div class="box_cat">
+             <img src="images/tools.png" width="120px" height="120px">
+             <p>Design</p>
+         </div></a> </li>
+ 
+         <li class="animals"> <a href="movies.html"><div class="box_cat">
+             <img src="images/movie-clapper-open.png"width="120px" height="120px">
+             <p>Movies</p>
+         </div></a> </li>
+ 
+         <li class="animals"> <a href="books.html"><div class="box_cat">
+             <img src="images/stack-of-books.png" width="120px" height="120px">
+             <p>Books</p>
+         </div></a> </li>
+ 
+         <li class="animals"> <a href="travel.html"><div class="box_cat">
+             <img src="images/travel-itinerary.png" width="120px" height="120px">
+             <p>Travel</p>
+         </div></a> </li>
+ 
+         <li class="animals"> <a href="space.html"><div class="box_cat">
+             <img src="images/rocket.png" width="120px" height="120px">
+             <p>Space</p>
+         </div></a> </li>
+ 
+         <li class="animals"> <a href="cars.html"><div class="box_cat">
+             <img src="images/Car.png"width="120px" height="120px">
+             <p>Cars</p>
+         </div></a> </li>
+ 
+         <li class="animals"> <a href="food.html"><div class="box_cat">
+             <img src="images/fast-food.png" width="120px" height="120px">
+             <p>Food</p>
+         </div></a> </li>
+ 
+         <li class="animals"> <a href="history.html"><div class="box_cat">
+             <img src="images/parchment.png" width="120px" height="120px">
+             <p>History</p>
+         </div></a> </li>
+        
+         <li class="animals"> <a href="tech.html"><div class="box_cat">
+             <img src="images/robotic-hand.png" width="120px" height="120px">
+             <p>Tech</p>
+         </div></a> </li>
+     </ol> 
+     
+     <script src="search.js"></script>
+</body>
+</html>
